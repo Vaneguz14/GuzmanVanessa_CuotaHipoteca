@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
+    <script src="funciones.js"> </script>
+    <title> Cálculo de las cuotas de la Hipoteca </title>
+    <style>
+        body { background-color: rgb(236, 189, 127);
+                font-family:sans-serif }
+    </style>
+</head>
+<body>
+    <div class="container" > <!-- Esta creado para poder centrar los inputs  -->
+    <h1> Calcula la cuota de tu Hipoteca</h1>
+    <form action="#" onsubmit="return compruebaDia()" > <!-- formulario-->
+        <div class="form-group" >
+            <label for="fecha"> Fecha: </label>
+            <input type="date" class="form-control" id="fecha"> <!--introducir la fecha-->
+        </div>
+    
+        <div class="form-group" >
+            <label for="Capital"> Capital pendiente:</label> <!-- cuanto dinero le falta por pagar-->
+            <input type="number" class="form-control" id="capital" max="1000000">
+        </div>
+        <div class="form-group" >
+            <label for="Intereses">Cuáles son tus intereses:</label> <!-- se refiere a los intereses anuales-->
+            <input type="number"  step= ".01" class="form-control" id="interes">
+        </div>
+        <div class="form-group">
+                <label for="plazo">Y el plazo restante (en años):</label> <!-- en cuántos años pagará el-->
+                <input type="number" class="form-control" id="plazo" max="40">
+        </div>
+        <div>
+            <input type="Submit" class="btn btn-info" value="Calcular"> <!-- validación del formulario-->
+        </div>
+        
+    </form> 
+    </div>
+</body>
+</html>
